@@ -12,6 +12,8 @@
 
 Deploy Velero to `velero` namespace, where `<PATH_TO_JSON_FILE>` points to the service account json key file.
 
+> Within the makefile, verify that the path is being used in the velero-install portion.
+
 ```bash
 velero install \
   --provider gcp \
