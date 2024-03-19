@@ -15,8 +15,8 @@ install-velero:
 	velero install \
 	--provider gcp \
 	--bucket prometheus-velero \
-	--secret-file /Users/austingeorgiades/Desktop/gcp-api-key-json/upheld-momentum-328313-a741f2b82db2.json \
-	--plugins velero/velero-plugin-for-gcp:v1.8.0;
+	--secret-file $$(echo $$GCP_SERVICE_ACCOUNT_JSON) \
+	--plugins velero/velero-plugin-for-gcp:v1.8.0
 
 # Load generation
 .PHONY: generate-load
